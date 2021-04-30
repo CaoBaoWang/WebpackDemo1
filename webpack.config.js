@@ -7,11 +7,16 @@ module.exports = {
     output: {
         filename: '[name].[contenthash].js',
     },
-    plugins: [new HtmlWebpackPlugin({
-        title:"my app",
-        template: "src/assets/index.html"
-
-    })],
+    devServer: {
+        contentBase: './dist',
+    },
+    devtool: 'inline-source-map',
+    plugins: [
+        new HtmlWebpackPlugin({
+            title:"my app",
+            template: "src/assets/index.html"
+        })
+    ],
     module: {
         rules: [
             {

@@ -8,10 +8,43 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title:"my app",
+            title: "my app",
             template: "src/assets/index.html"
         }),
     ],
- };
+
+    module: {
+        rules: [
+            // {
+            //     test: /\.scss$/i,
+            //     use: [
+            //         {
+            //             loader: "style-loader"
+            //         },
+            //         {
+            //             loader: "css-loader"
+            //         },
+            //         // Compiles Sass to CSS
+            //         {
+            //             loader: "sass-loader",
+            //             options: {
+            //                 implementation: require("dart-sass")
+            //             }
+            //         }
+            //     ],
+            // },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+
+                ],
+            },
+        ]
+    }
+}
+;
 
 

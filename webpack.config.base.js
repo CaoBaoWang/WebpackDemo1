@@ -42,6 +42,24 @@ module.exports = {
 
                 ],
             },
+            {
+                test: /\.less$/i,
+                loader: [
+                    // compiles Less to CSS
+                    "style-loader",
+                    "css-loader",
+                    "less-loader",
+                ],
+            },
+            {
+                test: /\.styl$/,
+                loader: [
+                    "style-loader",
+                    "css-loader",
+                    "stylus-loader"
+                ], // compiles Styl to CSS
+            },
+
         ]
     }
 }

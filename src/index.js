@@ -5,10 +5,10 @@ console.log(x);
 console.log('hi');
 
 
-const div = document.getElementById('app')
-div.innerHTML = `
-    <img src="${png}" />
-`
+// const div = document.getElementById('app')
+// div.innerHTML = `
+//     <img src="${png}" />
+// `
 
 const btn = document.createElement('button')
 btn.innerText = '懒加载'

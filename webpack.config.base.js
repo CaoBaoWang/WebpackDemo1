@@ -59,6 +59,14 @@ module.exports = {
                     "stylus-loader"
                 ], // compiles Styl to CSS
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
 
         ]
     }
